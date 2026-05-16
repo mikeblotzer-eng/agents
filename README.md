@@ -49,6 +49,22 @@ This code is free and publicly available under MIT License open source license (
 
 This repo is inteded for use with Python 3.9
 
+## Paper-only setup
+
+For restricted jurisdictions, compliance review, or strategy testing, use the
+paper-only watcher. It only reads public Gamma API data and writes simulated
+positions to `~/.polymarket/paper_watch_state.json`. It does not read wallet
+credentials, initialize CLOB auth, sign orders, or place trades.
+
+```bash
+python scripts/python/paper_watch.py run --candidates 30
+python scripts/python/paper_watch.py report --save
+```
+
+Treat the paper scorecard as a research tool, not a real-money signal. Do not
+connect a wallet or place live trades unless you have independently confirmed
+that your jurisdiction and intended use comply with Polymarket's terms.
+
 1. Clone the repository
 
    ```
